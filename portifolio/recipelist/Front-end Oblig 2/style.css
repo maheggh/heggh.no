@@ -1,0 +1,177 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.recipes {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Recipe list styles */
+#recipeList {
+  grid-column: 1;
+  max-height: 100vh;
+  overflow-y: scroll;
+  padding: 2rem;
+  position: relative;
+}
+
+#recipeList button {
+  margin-left: 1rem;
+}
+
+
+#recipeList li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Recipe form styles */
+#recipeForm {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #ff6b81;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff475f;
+}
+
+.add__recipe {
+  margin-top: 20px;
+}
+
+/* Typography */
+h1,
+h3 {
+  margin-bottom: 1rem;
+}
+
+/* Shop page styles */
+.shop__page {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.shop__page--text {
+  font-size: 20px;
+  color: #164552;
+}
+
+/* Product list styles */
+.product__list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  justify-content: center;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.product__item {
+  background-color: #f9e45b;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product__list img {
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+  height: 8rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+  width: 12rem;
+}
+
+.product__list img:hover {
+  transform: scale(1.1);
+}
+
+/* Cart styles */
+#cart-items,
+#checkout-message,
+#total-price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Buttons */
+.btn__checkout,
+.btn__discount {
+  background-color: #5bccf6;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn__checkout:hover,
+.btn__discount:hover {
+  background-color: #3da5d9;
+}
+
+/* Date/time styles */
+#date_time {
+  color: #5bccf6;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1080px) {
+  /* Add your CSS styles for devices with width 1080px or less here */
+  body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}

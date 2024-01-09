@@ -1,0 +1,106 @@
+:root {
+    --primary: #cee9fd;
+    --secondary: #111e27;
+    --primary-button: #e46307;
+    --secondary-button: #022036;
+    --accent: #9d0b30;
+    --text-light: #ffffff;
+    --overlay-dark: rgba(0, 0, 0, 0.75);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary);
+    overflow-x: hidden;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .artwork {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .artwork img {
+    max-width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .artwork:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* More Info button styling */
+  .artwork button {
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background-color: transparent;
+    color: var(--primary-button);
+    border: 2px solid var(--primary-button);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .artwork button:hover {
+    background-color: var(--primary-button);
+    color: var(--text-light);
+  }
+  
+  /* Sold label styling */
+  .artwork .sold {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1em;
+    color: var(--text-light);
+    background-color: var(--overlay-dark);
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+  
+  .artwork:hover .sold {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .info-container {
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 1280px) {
+    .nav-links a {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      padding: 1em;
+    }
+  }

@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background: #333;
+    height: 60px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ccc;
+  }
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('your-image.jpg') center/cover no-repeat fixed;
+  }
+  
+  .hero-title {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .cta-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background: #555;
+  }

@@ -1,0 +1,52 @@
+body{
+    background: #cccccc;
+}
+
+#main {
+    margin-top: 20px;
+    margin-bottom:20px;
+    padding: 20px;
+}
+
+#header {
+    text-align: center
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    padding-top: 20px;
+    background: #FFFFFF;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.full-image img {
+    max-width: 100%;
+    height: auto
+}
+.ds-navbar{
+}
+
+
+.pull-right{
+    float: right;
+}
+
+.logo{
+    font-size: 3rem;
+}
+
+.ds-navbar li{ border-right: 1px #686868 solid}
+.ds-navbar li:hover, .ds-navbar .current{ background: #f1f1f1;
+}

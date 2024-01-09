@@ -1,0 +1,427 @@
+ /* color scheme
+ -----------------
+     #0b0033;
+     #370031;
+     #832232;
+     #CE8964;
+     #EAF27C;
+------------------
+*/
+
+
+
+ /* Remove default margin 
+ ---------------------------*/
+ * {
+     margin: 0;
+     padding: 0;
+     font: inherit;
+     font-family: 'Be Vietnam Pro', sans-serif;
+ }
+
+ html,
+ body {
+     max-width: 100%;
+     overflow-x: hidden;
+     z-index: -1;
+ }
+
+ main {
+     margin-left: 2rem;
+     margin-right: 2rem;
+ }
+
+ /* Image scaleability
+  --------------------*/
+ img,
+ picture,
+ svg {
+     max-width: 100%;
+     display: block;
+ }
+
+ /* gap for everything
+  --------------------*/
+ .gap {
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+ }
+
+ /* font colors
+  ----------------------*/
+ p {
+     color: #000000;
+ }
+
+ .bright {
+     color: #ccc;
+ }
+
+ .dark {
+     color: #000000;
+ }
+
+ /*font sizes
+ ----------------*/
+
+ h4,
+ p {
+     font-size: 1rem;
+ }
+
+ h3 {
+     font-size: 1.25rem;
+ }
+
+ h2 {
+     font-size: 1.5rem;
+     color: #832232;
+ }
+
+ h1 {
+     font-size: 2rem;
+     color: #0b0033;
+ }
+
+ /*Navigation bar 
+  -------------------------------
+  help from: https://alvarotrigo.com/blog/hamburger-menu-css/ #6
+  */
+
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ .companylogo {
+     position: absolute;
+     width: 7rem;
+ }
+
+ .menu__flex {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     gap: 10rem;
+     padding-right: 5rem;
+     background-color: #EAF27C;
+     height: 7rem;
+     align-items: center;
+     list-style-type: none;
+     font-size: 1.5rem;
+ }
+
+ .menu__flex a {
+     text-decoration: none;
+ }
+
+ #menu__toggle {
+     display: none;
+ }
+
+
+ .visuallyhidden {
+     display: none;
+     color: transparent;
+ }
+
+ /*------------------------*/
+
+ .logo {
+     width: 10rem;
+ }
+
+ /* Index page 
+  ---------------*/
+
+ .bannerimage {
+     margin-top: 5rem;
+     width: 50rem;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .maincontainer>* {
+
+ }
+
+ .welcome,
+ .goal {
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ /* Game page
+  ------------ */
+ .gamecontainer>* {
+
+ }
+
+ .trashimage {
+     float: right;
+     margin-right: 20%;
+ }
+
+ .gamecontainer li {
+     list-style-image: url('/images/check.png');
+     margin-left: 2rem;
+ }
+
+ /* about page */
+
+ .birdfeeder>img {
+     width: 35rem;
+ }
+
+ .gamecontainer,
+ .aboutcontainer,
+ .maincontainer {
+     display: grid;
+     grid-template-columns: 50% 50%;
+     width: 95%;
+     gap: 2rem;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ /* contact page inspired by lab session
+  ----------------------------------------*/
+ .contactform {
+     justify-content: center;
+     margin: 10rem 10rem 50rem 10rem;
+     align-items: center;
+ }
+
+ input[type=text],
+ select,
+ textarea {
+     width: 100%;
+     padding: 1rem;
+     border: 1px solid #ccc;
+     border-radius: 0.5rem;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+     resize: vertical;
+ }
+
+ input {
+     margin-bottom: 0.5rem;
+ }
+
+ #toggle {
+     display: none;
+ }
+
+ /* Footer 
+    ---------------*/
+
+ footer {
+     background-color: #0b0033;
+     margin-top: auto;
+    padding: 20px;
+    bottom: 0;
+ }
+
+ footer a {
+     color: #EAF27C;
+ }
+
+ footer a:hover {
+     color: #b9734d;
+ }
+
+ .socials {
+     float: right;
+     display: grid;
+     margin-left: auto;
+     padding-right: 5rem;
+ }
+
+ address {
+     grid-area: b;
+     float: right;
+
+ }
+
+ .media {
+     display: grid;
+     grid-template-areas:
+         "a b"
+         "c d";
+    padding: 5rem;
+
+ }
+
+ .logo-ntnu {
+     grid-area: a;
+     align-self: start;
+ }
+
+ .credits {
+     grid-area: c;
+     align-self: end;
+ }
+
+
+ .socials {
+     grid-area: d;
+     align-self: end;
+     grid-template-columns: 50% 50% 50%;
+
+ }
+
+ .socials a {
+     width: 5rem;
+     text-align: center;
+ }
+
+ .socials img {
+     border-radius: 50%;
+     border-style: solid;
+     border-color: #ffffff;
+ }
+
+ .socials img:hover {
+     border: 0px solid #2600ff;
+     box-shadow: 5px 5px 25px #2600ff;
+     transition: all 0.3s ease;
+     border-radius: 0rem;
+ }
+
+ .tiktok img {
+     background-color: #ffffff;
+ }
+
+ @media (max-width: 980px) {
+
+     /* main navigation on mobile
+     modified version of: https://alvarotrigo.com/blog/hamburger-menu-css/ #6 
+     ----------------------------- */
+
+     #menu__toggle {
+         opacity: 0;
+     }
+
+     #menu__toggle:checked+.menu__btn>span {
+         transform: rotate(45deg);
+     }
+
+     #menu__toggle:checked+.menu__btn>span::before {
+         top: 0;
+         transform: rotate(0deg);
+     }
+
+     #menu__toggle:checked+.menu__btn>span::after {
+         top: 0;
+         transform: rotate(90deg);
+     }
+
+     #menu__toggle:checked~.menu__box {
+         left: 0 !important;
+     }
+
+     .menu__btn {
+         display: block;
+         position: fixed;
+         width: 4rem;
+         height: 4rem;
+         cursor: pointer;
+         z-index: 1;
+     }
+
+     .menu__btn>span,
+     .menu__btn>span::before,
+     .menu__btn>span::after {
+         display: block;
+         position: absolute;
+         width: 100%;
+         height: 0.5rem;
+         background-color: #616161;
+         transition-duration: .1s;
+     }
+
+     .menu__btn>span::before {
+         content: '';
+         top: -15px;
+     }
+
+     .menu__btn>span::after {
+         content: '';
+         top: 15px;
+     }
+
+     .menu__box {
+         display: block;
+         position: fixed;
+         top: 0;
+         left: 100%;
+         width: 300px;
+         height: 100%;
+         padding: 80px 0;
+         margin-left: 70%;
+         list-style: none;
+         background-color: #feffdd;
+         box-shadow: 2px 2px 15px rgba(0, 0, 0, .4);
+         transition-duration: .25s;
+     }
+
+     .menu__item {
+         display: block;
+         padding: 50px 24px;
+         color: #333;
+         font-family: 'Roboto', sans-serif;
+         font-size: 40px;
+         font-weight: 600;
+         text-decoration: none;
+         transition-duration: .25s;
+     }
+
+     .menu__item:hover {
+         background-color: #CFD8DC;
+     }
+
+     /* index page for mobile 
+     ------------------------*/
+
+
+     /* game page for mobile
+     ------------------------*/
+
+     .trashimage {
+         float: left;
+     }
+
+     .gamecontainer, 
+     .maincontainer, 
+     .aboutcontainer{
+        display:block;
+     }
+
+     /* all font sizes for mobile 
+ ------------------------------*/
+
+     address {
+         font-size: 3rem;
+        text-align: right;
+     }
+
+     h4,
+     p {
+         font-size: 1.2rem;
+     }
+
+     h3 {
+         font-size: 1.45rem;
+     }
+
+     h2 {
+         font-size: 1.7rem;
+     }
+
+     h1 {
+         font-size: 2.2rem;
+     }
+
+     .credits p {
+        margin-top: 100px;
+        font-size: 2rem;
+     }
+ }

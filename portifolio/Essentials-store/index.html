@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<!-- to connect the google fonts, so I can use them for this webpage-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- I felt like the font Be-vietnam would look good on this webpage-->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;400;500;700&display=swap" rel="stylesheet">
+<title>The essentials</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<!-- A wrapper called shop__container that includes the styling for the entire shop
+Using the BEM standard-->
+	<div class="shop__container">
+	<h1 class="shop__description">The essentials</h1>
+	<!--A unordered list with each shop item as a seperate list item. Each item comes with an onclick
+	attribute to trigger a function when clicked, each item trigger she addToCart function, but with different
+parameters-->
+	<ul class="product__list">
+		<li class="product__item">
+			<img src="./images/Banana.jpg" alt="picture of a Banana" onclick="addToCart('banana')">
+			<p class="product__text">Banana - $0.50</p>
+		</li>
+		<li class="product__item">
+			<img src="./images/potato.JPG" alt="picture of a Potato" onclick="addToCart('potato')">
+			<p class="product__text">Potato - $1.00</p>
+		</li>
+		<li class="product__item">
+			<img src="./images/bread.jpg" alt="picture of a bread" onclick="addToCart('bread')">
+			<p class="product__text">Bread - $2.00</p>
+		</li>
+		<li class="product__item">
+			<img src="./images/wagyu-beef.jpg" alt="picture of a wagyu beef" onclick="addToCart('wagyu-beef')">
+			<p class="product__text">wagyu beef - $3000.00</p>
+		</li>
+		<li class="product__item">
+			<img src="./images/stinger-missile.jpg" alt="picture of a stinger missile" onclick="addToCart('stinger-missile')">
+			<p class="product__text">Stinger missile - $197884.00</p>
+		</li>
+		<li class="product__item">
+			<img src="./images/Toothpick.jpg" alt="picture of a toothpick" onclick="addToCart('toothpick')">
+			<p class="product__text">Toothpick - $0.10</p>
+		</li>
+	</ul>
+
+<!-- a div allowing the jscode to print messages to innerHTML, and to be able to style
+these messages with css-->
+	<div id="cart-items"></div>
+	<div id="checkout-message"></div>
+	<div id="total-price"></div>
+	<!--two buttons, one for checkout and one for discount, when pressed triggers their 
+	respective javascript functions-->
+	<button onclick="checkout()" class="btn__checkout">Checkout</button>
+	<button onclick="addDiscount()" class="btn__discount">Apply 20% Discount</button>
+	</div>
+	<!--div added to display time, could also be modified to show all different sort of dates
+	and time formats-->
+	<div id="date_time"></div>
+</div>
+<!-- to trigger the javascript file, added at the end so it loads after the page is loaded-->
+	<script src="index.js"></script>
+</body>
+
+</html>

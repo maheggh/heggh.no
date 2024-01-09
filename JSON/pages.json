@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "page": [
+      {
+        "PID": "1",
+        "menu_order": "1",
+        "status": 1,
+        "GID": "1",
+        "content": [
+          {
+            "block4": "",
+            "block2": "",
+            "block1": "<h1>Velkommen til v&aring;re nettsider</h1><p>V&aring;re nettsider er under utarbeidelse...</p>",
+            "block5": "",
+            "block6": "",
+            "block3": ""
+          }
+        ],
+        "name": "Hjem",
+        "frontpage": 1,
+        "blocked": "0"
+      }
+    ]
+  }
+}

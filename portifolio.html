@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Heggholmen | Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/sass/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/portifolio.html">Buy art</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="#" class="logo"><img src="" alt=""></a>
+        </nav>
+    </header>
+    <div class="container">
+    <div class="portfolio"> 
+        <h1>Art Gallery</h1>
+        <div class="gallery">
+        </div>
+        
+        <script>
+            const artworks = [
+                {
+                    title: "Artwork 1",
+                    imageUrl: "./images/1.jpg",
+                    artist: "The maker",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 2500kr",
+                },
+                {
+                    title: "Artwork 2",
+                    imageUrl: "./images/3.jpg",
+                    artist: "Norwegian Coastline",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 3500kr",
+                },
+                {
+                    title: "Artwork 3",
+                    imageUrl: "./images/4.jpg",
+                    artist: "Entangled",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 2000kr",
+                },
+                {
+                    title: "Artwork 4",
+                    imageUrl: "./images/5.jpg",
+                    artist: "The General",
+                    sold: "true",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 2600kr",
+                },
+                {
+                    title: "Artwork 5",
+                    imageUrl: "./images/6.jpg",
+                    artist: "New addition",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 4000kr",
+                },
+                {
+                    title: "Artwork 6",
+                    imageUrl: "./images/7.jpg",
+                    artist: "The Crow",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 1000kr",
+                },
+                {
+                    title: "Artwork 7",
+                    imageUrl: "./images/8.jpg",
+                    artist: "Temptations",
+                    info: "Size: 40x40cm\nMedium: Oil\nPrice: 1200kr",
+                },
+                {
+                    title: "Artwork 8",
+                    imageUrl: "./images/9.jpg",
+                    artist: "Gummy Bear",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 900kr",
+                },
+                {
+                    title: "Artwork 9",
+                    imageUrl: "./images/10.jpg",
+                    artist: "Something in my drink",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 3000kr",
+                },
+                {
+                    title: "Artwork 10",
+                    imageUrl: "./images/11.jpg",
+                    artist: "Vespa",
+                    sold: "true",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 2000kr",
+                },
+                {
+                    title: "Artwork 11",
+                    imageUrl: "./images/12.jpg",
+                    artist: "Tree meeting",
+                    sold: "true",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 1800kr",
+                },
+                {
+                    title: "Artwork 12",
+                    imageUrl: "./images/13.jpg",
+                    artist: "Snail friend",
+                    sold: "true",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 1200kr",
+                },
+                {
+                    title: "Artwork 13",
+                    imageUrl: "./images/14.jpg",
+                    artist: "Circle of destruction",
+                    sold: "true",
+                    info: "Size: 55x46cm\nMedium: Oil\nPrice: 1600kr",
+                },
+                {
+                    title: "Artwork 14",
+                    imageUrl: "./images/15.jpg",
+                    artist: "Down by the river",
+                    sold: "true",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 1400kr",
+                },
+                {
+                    title: "Artwork 15",
+                    imageUrl: "./images/16.jpg",
+                    artist: "Summer Sunset",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 2000kr",
+                },
+                {
+                    title: "Artwork 16",
+                    imageUrl: "./images/17.jpg",
+                    artist: "Polar bear",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 900kr",
+                },
+                {
+                    title: "Artwork 17",
+                    imageUrl: "./images/18.jpg",
+                    artist: "Natural selection",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 1000kr",
+                },
+                {
+                    title: "Artwork 18",
+                    imageUrl: "./images/19.jpg",
+                    artist: "Honey we need to talk",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 2000kr",
+                },
+                {
+                    title: "Artwork 19",
+                    imageUrl: "./images/20.jpg",
+                    artist: "Kjøttmeis",
+                    sold: "true",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 900kr",
+                },
+                {
+                    title: "Artwork 20",
+                    imageUrl: "./images/21.jpg",
+                    artist: "Curious fish",
+                    info: "Size: 40x30cm\nMedium: Oil\nPrice: 1000kr",
+                },
+            ];
+            
+            const gallery = document.querySelector(".gallery");
+            
+    function createArtworkElement(artwork) {
+    const artworkElement = document.createElement("div");
+    artworkElement.classList.add("artwork");
+
+    const img = document.createElement("img");
+    img.src = artwork.imageUrl;
+    img.alt = artwork.title;
+
+    const title = document.createElement("h2");
+    title.textContent = artwork.title;
+
+    const artist = document.createElement("p");
+    artist.textContent = `${artwork.artist}`;
+
+    const infoButton = document.createElement("button");
+    infoButton.textContent = "More Info";
+
+    infoButton.addEventListener("click", () => {
+    const existingInfoContainer = artworkElement.querySelector('.info-container');
+
+    if (existingInfoContainer) {
+        existingInfoContainer.remove();
+    } else {
+        const infoContainer = document.createElement("div");
+        infoContainer.classList.add("info-container");
+
+        const infoParagraph = document.createElement("p");
+        infoParagraph.textContent = `${artwork.info}`;
+        infoParagraph.innerHTML = `${artwork.info.replace(/\n/g, '<br>')}`;
+
+        infoContainer.appendChild(infoParagraph);
+
+        artworkElement.appendChild(infoContainer);
+    }
+});
+    if (artwork.sold === "true") {
+        const sold = document.createElement("div");
+        sold.classList.add("sold");
+        sold.textContent = "Sold";
+        artworkElement.appendChild(sold);
+    }
+
+    artworkElement.appendChild(img);
+    artworkElement.appendChild(title);
+    artworkElement.appendChild(artist);
+    artworkElement.appendChild(infoButton);
+
+    return artworkElement;
+}
+            artworks.forEach((artwork) => {
+                const artworkElement = createArtworkElement(artwork);
+                gallery.appendChild(artworkElement);
+                
+            });
+        </script>
+    </div>
+    
+    <script src="/script.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+html {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+#shop-list {
+  display: grid;
+  list-style-type: none;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  padding: 0;
+}
+
+#shop-list li {
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#shop-list li:hover {
+  background-color: lightgray;
+}

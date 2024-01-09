@@ -1,0 +1,104 @@
+/* To allow the Be Vietnam font to be displayed all over the page
+Not really the BEM way, but I figured it would be okay in this scenario*/
+
+html {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/*Aligns all the text to the center, and adds a linear gradient to the shop background */
+.shop__container {
+  background: linear-gradient(#2b6777, #164552);
+  text-align: center;
+  border-radius: 20px;
+}
+
+/*changes all the list items to be in a grid pattern, the repeat(auto-fill) is used so each image
+has a max/min size of 230px before changing line, preventing the images from becoming too stretched.
+or squashed, also made a gradient behind the items, and applied a sneaky box shadow for show */
+.product__list {
+  width: 80%;
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fill, minmax(230px, auto));
+  background: linear-gradient(#f9e45b, #ffdd00);
+  padding-top: 20px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+
+/*The text on the top of the page saying "The essentials" 
+I wanted a different font-weight for this, to make it more sleek*/
+.shop__description {
+  font-size: 50px;
+  padding-top: 20px;
+  font-weight: 200;
+  color:#f9e45b
+}
+
+/*adjusts the size of all the images in the product list to be the same size.
+Object-fit: cover makes the images not lose their aspect ratio, and prevent them from being
+stretched or squished*/
+.product__list img {
+  width: 12rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+}
+
+/*Displays a tiny flash animation when you hover over the image, so it looks shiny.
+the transform scale makes the image slightly bigger when hovering over them, so you can clearly see
+which image is being selected.*/
+.product__list img:hover {
+  opacity: 1;
+	animation: flash 1.5s;
+  box-shadow: 2px 2px 20px white;
+  transform: scale(1.1);
+}
+
+/*the animation displayed on hover over the images in the product list, going from 80% opacity to 100%*/
+@keyframes flash {
+	0% {
+		opacity: .8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*Adds a spacing between the buttons, and round corners*/
+
+.btn__checkout, .btn__discount {
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+
+/*changes background of the buttons, and the distance between the text and the outher edge of the
+button*/
+.btn__checkout {
+background-color: #5bccf6;
+padding: 10px;
+}
+.btn__discount {
+  background-color: #5bccf6;
+  padding: 10px;
+}
+/*changes the buttons to white when hovered over*/
+.btn__checkout:hover, .btn__discount:hover {
+  background-color: white;
+}
+/*changes the color and size of the font displaying the total price*/
+#total-price {
+  color: white;
+  font-size: 30px;
+}
+
+/*changes the time display to be less noticeable, because I feel like its not that important.*/
+#date_time {
+  color:#5bccf6;
+  font-size: 25px;
+}

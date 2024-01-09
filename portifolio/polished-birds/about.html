@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="UN bird game about page" content="The about page">
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+  <title>The bird game</title>
+  <link href="./styles/style.css" rel="stylesheet">
+
+  <!-- to connect font be-vietnam-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+  <label class="checkbox__toggle" aria-label="toggle-menu" for="toggle">
+    <span class="visuallyhidden">toggle menu</span>
+  </label>
+
+  <div class="companylogo">
+    <a href='https://sdgs.un.org/goals/goal11'><img src='./images/goal11.JPG' width="300" class="center"
+        alt="united nations goal number 11"></a>
+  </div>
+  <nav class="menu__flex">
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox">
+      <label class="menu__btn" aria-label="toggle-menu" for="menu__toggle">
+        <span class="visuallyhidden">toggle menu</span>
+      </label>
+
+      <ul class="menu__box menu__flex">
+        <li><a class="menu__item" href="./index.html">Home</a></li>
+        <li><a class="menu__item" href="./game.html">The game</a></li>
+        <li><a class="menu__item" href="./about.html">About</a></li>
+        <li><a class="menu__item" href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Information about the project -->
+    <div class="projectinfo gap">
+      <h1>Information about the project</h1>
+    </div>
+    <div class="aboutcontainer">
+      <div class="information">
+        <figure class="birdfeeder">
+          <img src="./images/birdfeeder1.svg" width="300" alt="an image of a birdfeeder you can make">
+        </figure>
+      </div>
+      <aside class="aside1">
+        <h2 class="gap">The target audience</h2>
+        <ul>
+          <li>Target group #1 primary education: age 6 - 13 (years 1-7)</li>
+        </ul>
+        <p class="gap">
+          This game is developed for the age group between 6 and 13 years old, and I believe this is
+          the age group the game is most suitable for, mostly because if we go any lower than this
+          it might be difficult to make something that might need to be taped, glued or nailed together.
+          If you go any higher than this then this game might not be challenging enough.
+        </p>
+        <h2 class="gap">United Nations goal number 11</h2>
+        <ul>
+          <li>Made for UNs sustainability goal Nr.11</li>
+          <li>Make cities and human settlements inclusive, safe, resilient, and sustainable</li>
+        </ul>
+        <p class="gap">This game aims towards the requirements set by UN, by having many people
+          come together to play something together, making the human settlement more inclusive,
+          and because you make something useful out of trash, you are also making the cities more
+          sustainable.</p>
+          <p>
+          UNs goal number 11 focuses on reducing waste, "as cities grow, municipal solid waste problems mount.
+        99% of the world's urban population breathe polluted air according to new world health organisation air quality guidelines"</p>
+      </aside>
+      <!-- Colorscheme -->
+
+      <div class="fonts">
+        <h2 class="gap">The font selection</h2>
+        <p>For this project I wanted a font with a big font family, that works well when being
+          scaled up or down, I also wanted a font without serif.
+          I tested out different fonts like roboto, lato, verdana, before landing on a beautiful font
+          called "be-vietnam" which I have seen being used by Kevin Powell.
+
+          this font is warm and inviting, easy to reed, and looks somewhat professional.</p>
+        <h2 class="gap">The visual hierarchy</h2>
+        <ul>
+          <li class="gap">Size - Users notice larger elements more easily.</li>
+        </ul>
+        <p>I wanted the index page to have a big logo that immidiently catches the eye, and tells
+          the user what this page is all about, with the title "The bird game"</p>
+        <ul>
+          <li class="gap">Color - Bright colors typically attract more attention than muted ones.</li>
+        </ul>
+        <p>I wanted the main navigation to be bright and yellow, so that its immidiently obvious how you
+          can get around on the page, its the same color as the main logo, which is of equal importance</p>
+        <ul>
+          <li class="gap">Contrast - Dramatically contrasted colors are more eye-catching.</li>
+        </ul>
+        <p>The main menu is easily visible because of its strong contrasts, text on dark backgrounds are white or
+          yellow,
+          while text on bright backgrounds are black or dark blue, to create as much contrasts as possible.</p>
+        <ul>
+          <li class="gap"> Alignment - Out-of-alignment elements stand out over aligned ones.</li>
+        </ul>
+        <p>
+          I used this concept for the headlines, which I placed outside the containers, so that its obvious what
+          the page is about.</p>
+        <ul>
+          <li class="gap"> Repetition - Repeating styles can suggest content is related.</li>
+        </ul>
+        <p>
+          I reused some of the same images, and I made the whole page in the same graphical style.</p>
+      </div>
+      <aside class="aside2">
+        <h2 class="gap">The page layout</h2>
+        <p>In this project I used a combination of grid and flex for the page layouts, I wanted to have multiple columns
+          on wide screens so that
+          the content of the page fills the entire screen, making use of the whole screen, therefore I used flex on the
+          pages with lots of information.
+          for mobile I wanted 1 column, because if there are multiple columns the text gets too small to read.
+          I decided to create a hamburger menu for all screens below 980px, which is most mobile screens. The reason I
+          did this was because the text on a normal navigation is hard to click on a phone screen when the text is so
+          small.
+          For the footer I used grid start and grid end properties so that for example the social media buttons will
+          always be in the bottom right regardless of size, leaving a more consistant design.
+        </p>
+
+        <h2 class="gap">sustainability</h2>
+        <p>For sustainability I used white background, and very few colors, so it costs uses less ink to print out. I
+          mainly used SVG files, so they can be scaled to the right size regardless of displayed width, so I don't
+          need to have huge png or jpg files. The images that are not svgs I made as small as possible to save space.
+          And I deleted all excess images.
+          I made reusable code as much as possible by nesting multiple classes together and give them common attributes.
+          I also deleted un-used attributes regularily to make the code as small as possible.</p>
+      </aside>
+      <div class="colorscheme">
+        <h2 class="gap">The color scheme</h2>
+        <p>The color scheme for this page was chosen for strong visibility,
+          clear contrasts, and child-friendly colors. I mostly used the same color scheme for the images on the webpage,
+          and gave the body a white background
+          limiting the amount of colors needed to print out the page.
+        </p>
+        <figure class="colorschemeimg">
+          <img src="./images/colorscheme.svg" width="120" alt="an image of the color scheme used" class="gap">
+        </figure>
+      </div>
+    </div>
+    <!---->
+  </main>
+
+  <footer class="media">
+    <figure class="logo-ntnu">
+      <img src="./images/logo_ntnu.svg" id="ntnulogo" alt="the logo for NTNU University">
+    </figure>
+    <div class="address">
+      <address>
+        <a href="mail:postmottak@ntnu.no">E-mail: postmottak@ntnu.no</a>
+        <a href="tel:+4773595000">Telephone servicedesk: 73 59 50 00</a>
+      </address>
+    </div>
+    <div class="credits">
+      <p class="bright">webpage made by Martin Heggholmen in IDG1292 webcoding (2022 Autumn)</p>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/un" class="facebook" target="_blank">
+        <img src="./images/facebook.png" alt="an image of the facebook logo">Facebook</a>
+      <a href="https://www.tiktok.com/un" class="tiktok" target="_blank">
+        <img src="./images/tiktok.svg" alt="an image of the tiktok logo">Tiktok</a>
+      <a href="https://www.instagram.com/un" class="instagram" target="_blank">
+        <img src="./images/instagram.png" alt="an image of the instagram logo">Instagram</a>
+    </div>
+  </footer>
+</body>
+
+</html>

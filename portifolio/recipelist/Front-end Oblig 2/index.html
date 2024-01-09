@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic meta tags for charset and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recipe List</title>
+
+  <!-- Link the stylesheet for this webpage -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="page__wrapper">
+    <!-- Recipe list section -->
+    <div id="recipeList">
+      <h1>Recipes</h1>
+      <ul id="list"></ul>
+	  <div id="recipeDetails" style="display: none;"></div>
+      <!-- Recipe form section -->
+      <form id="recipeForm">
+        <h3>Add Recipe</h3>
+
+        <!-- Recipe name input -->
+        <label for="recipeName">Name:</label>
+        <input type="text" id="recipeName" required>
+
+        <!-- Recipe ingredients input -->
+        <label for="recipeIngredients">Ingredients:</label>
+        <textarea id="recipeIngredients" rows="4" cols="30" required></textarea>
+
+        <!-- Recipe preparation input -->
+        <label for="recipePreparation">Preparation:</label>
+        <textarea id="recipePreparation" rows="4" cols="30" required></textarea>
+
+        <!-- Add recipe button with aria label for accessability-->
+        <button type="submit" class="add__recipe" aria-label="Add Recipe">Add Recipe</button>
+      </form>
+    </div>
+</div>
+    <div class="shop__page">
+      <h3 class="shop__page--text">Buy your ingredients</h3>
+		<ul class="product__list">
+			<li class="product__item">
+				<img src="./images/Banana.jpg" alt="picture of a Banana" onclick="addToCart('banana')">
+				<p class="product__text">Banana - $0.50</p>
+			</li>
+			<li class="product__item">
+				<img src="./images/potato.JPG" alt="picture of a Potato" onclick="addToCart('potato')">
+				<p class="product__text">Potato - $1.00</p>
+			</li>
+			<li class="product__item">
+				<img src="./images/bread.jpg" alt="picture of a bread" onclick="addToCart('bread')">
+				<p class="product__text">Bread - $2.00</p>
+			</li>
+			<li class="product__item">
+				<img src="./images/milk.jpg" alt="picture of a wagyu beef" onclick="addToCart('milk')">
+				<p class="product__text">1L milk - $2.00</p>
+			</li>
+			<li class="product__item">
+				<img src="./images/bakingpowder.jpg" alt="picture of bakingpowder" onclick="addToCart('bakingpowder')">
+				<p class="product__text">100G bakingpowder - $0.40</p>
+			</li>
+			<li class="product__item">
+				<img src="./images/oil.jpg" alt="picture of vegetable oil" onclick="addToCart('oil')">
+				<p class="product__text">0,5L vegetable oil - $1.00</p>
+			</li>
+		</ul>
+
+      <div id="cart-items"></div>
+      <div id="checkout-message"></div>
+      <div id="total-price"></div>
+	  <div class="checkout">
+      <button onclick="checkout()" class="btn__checkout">Checkout</button>
+      <button onclick="addDiscount()" class="btn__discount">Apply 20% Discount</button>
+	</div>
+    <div id="date_time"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

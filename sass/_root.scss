@@ -1,0 +1,225 @@
+:root {
+  --primary: #cee9fd;
+  --secondary: #111e27;
+  --primary-button: #e46307;
+  --secondary-button: #022036;
+  --accent: #9d0b30;
+  --primary-light: #e8f4fd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: var(--primary-light);
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3vw;
+  height: 60px;
+  background-color: var(--secondary);
+  z-index: 100;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+
+.hamburger-menu span {
+  height: 3px;
+  background-color: var(--primary-button);
+}
+
+.hamburger-menu.open span:nth-child(1),
+.hamburger-menu.open span:nth-child(3) {
+  position: absolute;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: rgba(17, 30, 39, 0.95);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nav-links.open {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.nav-links ul {
+  text-align: center;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--primary-button);
+  padding: 15px;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.nav-links a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-button);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--primary-button);
+  color: var(--secondary);
+  transform: translateX(10px);
+}
+
+.nav-links a:hover:before {
+  transform: scaleX(1);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(/images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links.open ~ .hero::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+  color: var(--secondary);
+  font-size: 4rem;
+  margin-bottom: 1em;
+  text-align: center;
+  filter: drop-shadow(5px 0 0 var(--primary-button));
+}
+
+.hero-subtitle {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 2.5em;
+  text-align: center;
+  filter: drop-shadow(1px 0 5px var(--primary));
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 0 2vw;
+  }
+
+  .hamburger-menu {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.5em;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

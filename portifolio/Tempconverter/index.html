@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Menu project</title>
+  <meta name="description" content="Menu project">
+  <meta name="author" content="Martin Heggholmen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- Wrapper for the whole temperature meter-->
+  <div class="background__wrapper">
+  <div class="temp__wrapper">
+    <label for="temperature" id="temp__label">Enter temperature to see if the bathwater is hot enough</label>
+    <input type="number" id="temperature" name="temperature" placeholder="Temperature">
+
+    <select id="unit" name="unit">
+      <option value="celsius">Celsius</option>
+      <option value="fahrenheit">Fahrenheit</option>
+    </select>
+    <div class="convert__btn">
+      <button onclick="convertTemperature()">Convert</button>
+
+      <p id="tempIn">Temperature in <span id="outputUnit"></span>: <span id="result"></span></p>
+      <p id="bathMessage"></p>
+
+    <img id="bathImage" src="" alt="images displaying different temperatures">
+  </div>
+  </div>
+
+</div>
+  <!-- to load javascript-->
+  <script src=" index.js"></script>
+</body>
+
+</html>
